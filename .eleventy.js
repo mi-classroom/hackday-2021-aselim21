@@ -2,6 +2,7 @@ const htmlmin = require('html-minifier');
 
 
 module.exports = function (eleventyConfig) {
+  
   eleventyConfig.setUseGitIgnore(false);
 
   // Watch our compiled assets for changes
