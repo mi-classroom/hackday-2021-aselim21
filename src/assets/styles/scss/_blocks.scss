@@ -9,6 +9,7 @@
   background-color: #000;
   position: relative;
   
+  
   >img {
     width: 100%;
   }
@@ -65,9 +66,13 @@
   overflow: hidden;
   background-color: #000;
   position: relative;
+  width: clamp(10rem, 100%, 50rem);
+ 
   
   >img {
     width: 100%;
+    max-width: 100%;
+    display:block;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
@@ -126,7 +131,7 @@
     width: 100%;
   }
 
-  >figcaption {}
+  // >figcaption {}
 }
 
 /* Image Description
@@ -181,7 +186,59 @@
       padding-bottom: 0;
     }
 
-    dt[data-target] + dd.is-open{
+    // dt[data-target] + dd.is-open{
+    // }
+  }
+}
+
+/*TODO Form fuer Metadaten
+##################################################################*/
+
+#kommentar-hinterlassen form label {
+  display: block;
+}
+.formFuerMetadaten{
+  grid-column-start: inherit;
+
+  input{
+    background-color: $dark;
+    color: $lighter;
+    height: 2rem;
+  }
+  .form-button{
+   
+    input{
+      background-color: $accent;
+      cursor: pointer;
+      color: $darker;
     }
   }
+  .field-with-label{
+    padding-bottom: 20px;
+    
+    .langtext{
+      height: 5rem;
+    }
+
+  }
+}
+
+#kommentar-hinterlassen form input[type="text"],
+#kommentar-hinterlassen form textarea {
+  display: block;
+  width: 100%;
+  padding: var(--xxs);
+}
+
+#kommentar-hinterlassen form textarea {
+  height: var(--xxl);
+}
+
+#kommentar-hinterlassen .headline {
+  font-size: var(--m);
+  padding-top: 0;
+}
+
+#kommentar-hinterlassen fieldset {
+  margin-bottom: var(--m);
 }
