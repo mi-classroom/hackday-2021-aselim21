@@ -399,7 +399,8 @@ h3 {
 
 .ut-bg-gradient > p {
   position: relative;
-  z-index: 200; }
+  z-index: 200;
+  font-family: "Roboto-light", sans-serif; }
 
 .ut-bg-gradient::before {
   content: "";
@@ -582,6 +583,42 @@ button.btn {
       overflow: hidden;
       max-height: 1000px;
       padding-bottom: 0; }
+
+/*TODO Form fuer Metadaten
+##################################################################*/
+#kommentar-hinterlassen form label {
+  display: block; }
+
+.formFuerMetadaten {
+  grid-column-start: inherit; }
+  .formFuerMetadaten input {
+    background-color: #666666;
+    color: #FFFFFF;
+    height: 2rem; }
+  .formFuerMetadaten .form-button input {
+    background-color: #FFCC00;
+    cursor: pointer;
+    color: #333333; }
+  .formFuerMetadaten .field-with-label {
+    padding-bottom: 20px; }
+    .formFuerMetadaten .field-with-label .langtext {
+      height: 5rem; }
+
+#kommentar-hinterlassen form input[type="text"],
+#kommentar-hinterlassen form textarea {
+  display: block;
+  width: 100%;
+  padding: var(--xxs); }
+
+#kommentar-hinterlassen form textarea {
+  height: var(--xxl); }
+
+#kommentar-hinterlassen .headline {
+  font-size: var(--m);
+  padding-top: 0; }
+
+#kommentar-hinterlassen fieldset {
+  margin-bottom: var(--m); }
 
 .header {
   position: relative;

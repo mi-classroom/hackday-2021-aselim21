@@ -73,8 +73,47 @@ Doku: tbd.
         [http://www.artsmia.org/viewer/detail.php?v=12&id=1324 (accessed 03.05.2012)]</p>
     </div>
 
-    <div>
+    <div id= "kommentar-hinterlassen" class="formFuerMetadaten">
+    <!--TODO Formular-->
+    <form>
+     <fieldset>
+     
+    <div class="field-with-label">
+    <input type="text" id="deteiart" name="deteiart" class="kurztext">
+    <label for="deteiart">Dateiart</label>
     </div>
+    
+    <div class="field-with-label">
+     <input type="text" id="beschreibung" name="beschreibung" class="langtext">
+    <label for="beschreibung">Beschreibung</label>
+    </div>
+    
+    <div class="field-with-label">
+    <input type="text" id="datum" name="datum" placeholder="tt.mm.jjjj" class="zahl">
+    <label for="datum">Datum</label>
+    </div>
+    
+    <div class="field-with-label">
+    <input type="text" id="rechte" name="rechte" class="kurztext">
+    <label for="rechte">Abbildung Rechte</label>
+    </div>
+    
+    <div class="field-with-label">
+    <input type="text" id="quelle" name="quelle" class="kurztext">
+    <label for="quelle">Abbildung Quelle</label>
+    </div>
+    
+    </fieldset>
+
+<fieldset>
+<div class="form-button">
+<input type="button" value="abbrechen">
+<input type="submit" value="speichern">
+</div>
+</fieldset>
+    </form>
+    </div>
+
   </article>
 
 </main>
