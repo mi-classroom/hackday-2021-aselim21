@@ -381,7 +381,7 @@ h1, h2, h3 {
 
 p, table, figcaption, dt, dl, dd {
   line-height: 120%;
-  font-size: 1rem; }
+  font-size: 1.28rem; }
 
 h1 {
   font-size: 2rem;
@@ -421,9 +421,7 @@ h3 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1.28rem;
-  grid-row-gap: 1.28rem;
+  grid-gap: 1.28rem;
   transition: all 0.5s; }
   .grid-container > li > a {
     height: 100%;
@@ -431,9 +429,28 @@ h3 {
 
 .grid-container-zweispalter {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem; }
+
+@media only screen and (max-width: 720px) {
+  .grid-container {
+    grid-template-columns: 1fr; }
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr; } }
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; }
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr 1fr; }
+  /* styles for mid-tier viewport widths */ }
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr 1fr; }
+  /* original CSS styles */ }
 
 button.btn {
   padding: 0;
@@ -497,9 +514,12 @@ button.btn {
 .card-image-with-caption-v2 {
   overflow: hidden;
   background-color: #000;
-  position: relative; }
+  position: relative;
+  width: clamp(10rem, 100%, 50rem); }
   .card-image-with-caption-v2 > img {
     width: 100%;
+    max-width: 100%;
+    display: block;
     aspect-ratio: 1/1;
     object-fit: cover; }
   .card-image-with-caption-v2 > figcaption {

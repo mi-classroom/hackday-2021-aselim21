@@ -435,6 +435,15 @@ h3 {
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem; }
 
+@media only screen and (max-width: 600px) {
+  /* styles for smallest viewport widths */ }
+
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  /* styles for mid-tier viewport widths */ }
+
+@media only screen and (min-width: 960px) {
+  /* original CSS styles */ }
+
 button.btn {
   padding: 0;
   background-color: transparent;
@@ -500,6 +509,7 @@ button.btn {
   position: relative; }
   .card-image-with-caption-v2 > img {
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover; }
   .card-image-with-caption-v2 > figcaption {
